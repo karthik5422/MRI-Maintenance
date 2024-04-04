@@ -1,0 +1,32 @@
+Test Name,Test Type,Result 1,Result 2,Result 3,Result 4,Result 5,Result 6,Result 7,Result 8
+Geometric accuracy (mm),Localizer,-2,0,-1,-2,-2,1,-2,1
+Geometric accuracy (mm),Slice 1 mm with vertical dimension,-2,-1,-2,0,0,0,0,0
+Geometric accuracy (mm),Slice 1 mm with horizontal dimension,-1,-1,-1,-1,0,-1,0,0
+Geometric accuracy (mm),Slice 5mm with vertical dimension,-2,-1,-2,-2,0,0,0,-1
+Geometric accuracy (mm),Slice 5mm with horizontal dimension,-1,0,-2,0,-1,-1,-1,-1
+Geometric accuracy (mm),Slice 5mm with diagonal dimension with upper left and lower right,-3,-1,-1,0,-1,0,-1,0
+Geometric accuracy (mm),Slice 5mm with diagonal dimension with upper right and lower left,-3,0,-1,-1,0,0,0,0
+High-contrast spatial resolution (mm),Test 1 with horizontal resolution,1,1,1,1,1,1,1,1
+High-contrast spatial resolution (mm),Test 1 with vertical resolution,1,1,1,1,1,1,1,1
+High-contrast spatial resolution (mm),Test 2 with horizontal resolution,1,1,1,1,1,1,1,1
+High-contrast spatial resolution (mm),Test 2 with vertical resolution,1,1,1,1,1,1,1,1
+Slice thickness accuracy (mm),Test 1,0.3,0.6,0.5,0.4,1.4,1.2,0.4,0.6
+Slice thickness accuracy (mm),Test 2,0.2,0.1,0.2,0,0.3,0.4,-0.1,0.1
+Slice position accuracy (mm),Test 1 with bias in superior slice,1,1.5,1,-2,1.5,1.5,0,-1
+Slice position accuracy (mm),Test 1 with bias in inferior slice,2,1,1,-1,0.5,0,0.5,-0.5
+Slice position accuracy (mm),Test 2 with bias in superior slice,1.5,1,1.5,-1.5,2,1.5,0,-1
+Slice position accuracy (mm),Test 2 with bias in inferior slice,2.3,2,1,-1,0.5,0,0.5,-0.5
+Image intensity Uniformity (%),Test 1,88,91,93,92,91,93,92,92
+Image intensity Uniformity (%),Test 2,89,93,92,94,91,92,92,94
+Percent signal ghosting (%),Test 1,0.04,0.8,0.05,0.03,1.2,0.4,0.2,0.4
+Low-contrast object detectability (contrast level),Test 1 with 1.4% of contrast level,0,3,9,8,9,8,9,5
+Low-contrast object detectability (contrast level),Test 1 with 2.5% of contrast level,9,9,10,9,10,9,10,6
+Low-contrast object detectability (contrast level),Test 1 with 3.6%  of contrast level,9,10,10,9,10,10,10,9
+Low-contrast object detectability (contrast level),Test 1 with 5.1%  of contrast level,9,10,10,10,10,10,10,10
+Low-contrast object detectability (contrast level),Test 2 with 1.4% of contrast level,0,2,7,2,8,4,8,5
+Low-contrast object detectability (contrast level),Test 2 with 2.5% of contrast level,0,8,10,8,9,9,9,7
+Low-contrast object detectability (contrast level),Test 2 with 3.6%  of contrast level,2,9,10,9,9,9,10,9
+Low-contrast object detectability (contrast level),Test 2 with 5.1%  of contrast level,9,10,10,9,9,10,10,10
+Signal-to-noise ratio,Test 1,283,427,343,294,164,139,382,206
+Signal-to-noise ratio,Test 2,181,284,227,158,144,83,283,121
+Central frequency (Hz),Test 1,63870647,63870545,63867509,63869411,63590094,63589389,40481340,40481282
