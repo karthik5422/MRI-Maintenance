@@ -5,3 +5,5 @@ langchain_google_genai
 google-generativeai
 pandas
 scikit-learn
+PyPDF2
+faiss-cpu

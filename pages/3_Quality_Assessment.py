@@ -103,7 +103,7 @@ Based on data given above, analyze result data of each test with above given all
 
 'Maintenance' specify which component maintenance is required of MRI System; and highlight them in Bold letters.
 
-'Urgency' as "Immediate", "in a week", "in a month", "in 3 months" of time.
+'Urgency (Approx.)' as "Immediate", "in a week", "in a month", "in 3 months" of time.
 
 The output should use the below labels; Output should not be crossed 4000 tokens.
 
@@ -115,7 +115,7 @@ Actions:
 
 Maintenance:
 
-Urgency:
+Urgency (Approx.):
 
 The output should be shown in tabular format with the above column.""")
 

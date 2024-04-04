@@ -31,11 +31,11 @@ The objective of preventive maintenance is to avoid equipment failure by predict
 2. The model is developed on past history data of an equipment (Gen AI based on machine learning), create / fine tune the current model with relevant past data and validate with real time data that collected from respective equipment.
 """)
 
-image = "images\image001.png"
-st.image(image, use_column_width=True)
+image_path = "images\image001.png"
+st.image(image_path, use_column_width=True)
 
-image = "images\image002.png"
-st.image(image, use_column_width=True)
+image_path = "images\image002.png"
+st.image(image_path, use_column_width=True)
 
 st.subheader("Current System vs Proposed System:")
 data = {
@@ -98,17 +98,17 @@ st.write("""
 7. General equipment assessment
 """)
 
-image = "images\image003.png"
-st.image(image, use_column_width=True)
+image_path = "images\image003.png"
+st.image(image_path, use_column_width=True)
 
-image = "images\image004.png"
-st.image(image, use_column_width=True)
+image_path = "images\image004.png"
+st.image(image_path, use_column_width=True)
 
-image = "images\image005.png"
-st.image(image, use_column_width=True)
+image_path = "images\image005.png"
+st.image(image_path, use_column_width=True)
 
-image = "images\image006.png"
-st.image(image, use_column_width=True)
+image_path = "images\image006.png"
+st.image(image_path, use_column_width=True)
 
 st.subheader("Solution - Software & Tools:")
 st.write("""
@@ -141,7 +141,7 @@ st.write("""
 """)
 
 st.header("Team Behind:")
-image = "images\image007.png"
-st.image(image, use_column_width=True)
+image_path = "images\image007.png"
+st.image(image_path, use_column_width=True)
 
 
