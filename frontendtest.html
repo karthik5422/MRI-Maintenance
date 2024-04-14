@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MRI Data</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mri-data-container"></div>
+    <script>
+      const container = document.getElementById("mri-data-container");
+      const totalRows = 5000;
+      let currentRow = 1;
+      const delay = 10000;
+      function fetchAndDisplayScan() {
+        fetch(`http://127.0.0.1:5000/mri_data/${currentRow}`)
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.error) {
+              console.error("Error:", data.error);
+            } else {
+              displayScan(data);
+              currentRow++;
+              if (currentRow <= totalRows) {
+                setTimeout(fetchAndDisplayScan, delay);
+              }
+            }
+          })
+          .catch((error) => {
+            console.error("Error fetching MRI data:", error);
+          });
+      }
+
+      function displayScan(scan) {
+        const scanDiv = document.createElement("div");
+
+        const scanDetailsHeading = document.createElement("h3");
+        scanDetailsHeading.textContent = `Current scan details with MRI performance data ${scan.sl_no}`;
+        scanDiv.appendChild(scanDetailsHeading);
+
+        const table = document.createElement("table");
+        const thead = document.createElement("thead");
+        const tbody = document.createElement("tbody");
+        const row = document.createElement("tr");
+
+        const columns = [
+          "sl.no",
+          "scan_type",
+          "scan_time",
+          "snr (dB)",
+          "drift (Hz)",
+          "drift_ppm(ppm)",
+          "grad_perf(G/cm/ms)",
+          "coil_type",
+          "error_temp (°C)",
+          "sys_temp (°C)",
+          "cyro_boiloff(liters/hour)",
+          "rf_power (%)",
+          "grad_temp (°C)",
+          "grad_current (A)",
+          "x_axis_pos (mm)",
+          "y_axis_pos (mm)",
+          "z_axis_pos (mm)",
+          "Error_Code",
+        ];
+
+        columns.forEach((column) => {
+          const th = document.createElement("th");
+          th.textContent = column;
+          row.appendChild(th);
+        });
+
+        thead.appendChild(row);
+        table.appendChild(thead);
+
+        const dataRow = document.createElement("tr");
+        Object.values(scan).forEach((value) => {
+          const td = document.createElement("td");
+          td.textContent = value;
+          dataRow.appendChild(td);
+        });
+
+        tbody.appendChild(dataRow);
+        table.appendChild(tbody);
+        scanDiv.appendChild(table);
+
+        const statusHeading = document.createElement("h3");
+        statusHeading.textContent = "Current Status:";
+        scanDiv.appendChild(statusHeading);
+
+        const statusPara = document.createElement("p");
+        statusPara.textContent = scan.recommended_actions;
+        scanDiv.appendChild(statusPara);
+
+        const hr = document.createElement("hr");
+        scanDiv.appendChild(hr);
+
+        container.appendChild(scanDiv);
+      }
+
+      fetchAndDisplayScan();
+    </script>
+  </body>
+</html>
